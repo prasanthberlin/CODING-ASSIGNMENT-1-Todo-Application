@@ -1,0 +1,34 @@
+get http://localhost:4000/todos/?search_q=Buy
+
+
+###
+get http://localhost:4000/todos/5
+
+
+###
+get http://localhost:4000/agenda/?date=2021-04-35
+
+###
+post http://localhost:4000/todos/
+Content-Type: application/json
+
+{
+ "id": 7,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+
+
+###
+put http://localhost:4000/todos/7
+Content-Type: application/json
+
+{ 
+    "status": "DONE" 
+}
+
+###
+DELETE http://localhost:4000/todos/6
